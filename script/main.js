@@ -236,8 +236,15 @@ var forfaits = [
     }
 ];
 
-document.body.innerHTML += "<ul></ul>";
+
 
 for (var i=0; i<forfaits.length ; i++){
-    document.body.querySelector("ul").innerHTML += "<li>" +forfaits[i].nom + "</li>";
+    document.body.innerHTML+= "<div id='forfait" + i + "'></div>";
+    var selected_div = document.body.querySelector("div#forfait" + i + "");
+    selected_div.innerHTML += "<ul></ul>";
+    var selected_ul = selected_div.getElementsByTagName("ul")[0];
+    selected_ul.innerHTML += "<li> Le Nom du forfait : " +forfaits[i].nom + "</li>";
+    selected_ul.innerHTML += "<li> Le prix moyen : " +forfaits[i].prix_moy_saison + "</li>";
+    selected_ul.innerHTML += "<li> La date du début de la saison : " +forfaits[i].debut_saison + "</li>";
+    selected_ul.innerHTML += "<li> La description : " +forfaits[i].description + "</li>";
 }
