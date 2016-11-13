@@ -239,8 +239,8 @@ var forfaits = [
 
 
 for (var i=0; i<forfaits.length ; i++){
-    document.body.innerHTML+= "<div id='forfait" + i + "'></div>";
-    var selected_div = document.body.querySelector("div#forfait" + i + "");
+    document.body.innerHTML+= "<div id='forfait" + i+1 + "'></div>";
+    var selected_div = document.body.querySelector("div#forfait" + i+1 + "");
     selected_div.innerHTML += "<ul></ul>";
     var selected_ul = selected_div.getElementsByTagName("ul")[0];
     selected_ul.innerHTML += "<li> Le Nom du forfait : " +forfaits[i].nom + "</li>";
