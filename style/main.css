@@ -1,0 +1,131 @@
+/* Reset css */
+* {
+    box-sizing: border-box; /* Bordures comprises dans les dimensions */
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+html {
+    font-size: 16px;
+}
+h1 {
+    text-align: center;
+    margin: 5px;
+}
+div[id^="forfait"]{
+    display: inline-block;
+    width: 25%;
+    height: 250px;
+    border: 1px solid lightblue;
+    margin:10px;
+}
+div[id^="forfait"]:nth-of-type(3n+1){
+    margin-left: 100px;
+}
+div[id^="forfait"]:nth-of-type(1),div[id^="forfait"]:nth-of-type(2),div[id^="forfait"]:nth-of-type(3){
+    margin-top: 50px;
+}
+
+/* **** Code css pour menu 4 items centrés **** */
+#wrapper ul.menu {
+    padding : 0; /* Supprime la marge interne pour tous les éléments */
+    box-sizing: border-box; /* Bordures comprises dans les dimensions */
+    list-style-type: none; /* Pour oter les puces */
+    width:80%;
+    margin:0 auto; /* Centrage horizontal block dans block */
+    font-family: 'Open Sans', arial, serif;
+    font-size: 125%;
+    text-align: center;
+    height: 60px;
+    color: black;
+    position: sticky;
+}
+
+#wrapper ul.menu li{
+    background-color: lightsalmon;
+    border: 2px solid lightgray;
+    height:inherit;
+    display: inline-block;
+    width: 29%;
+    /*Reset des hyperliens (normalement sur toute la page)*/
+}
+#wrapper ul.menu li:not(:last-of-type) {
+    margin-right: 0;
+}
+#wrapper ul.menu li a {
+    text-decoration: none;
+}
+/*Lien non visité*/
+ul.menu li a :link{
+    color: black;
+    font-size: 24px;
+    text-shadow: 4px 4px 8px white ;
+}
+ul.menu li a:visited{
+    color: black;
+    font-size: 2em;
+    font-weight: bolder;
+}
+/*Lien survolé*/
+ul.menu li a:hover{
+    color: red;
+}
+/*Lien en train d'être cliqué*/
+ul.menu li.active a{
+    color: purple;
+    background-size: contain;
+}
+
+/* **** CSS FORMULAIRE CONTACT **** */
+form {
+    width: 50%;
+    margin: 10px auto;
+    overflow: auto; /* ajuste la hauteur du formulaire afin qu'il contienne tous les éléments (pas de débordements) */
+    position: relative;
+    left: -50px;
+}
+input[type=text],[type=tel],[type=email],select{
+    width: 70%;
+    padding:4px 10px;
+    margin: 10px ;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    display: block;
+}
+label {
+    font-size: 1.2em;
+}
+
+div#saisie {
+    border-radius: 5px;
+    margin-right: 30%;
+}
+div#comment {
+    margin-top: 3%;
+}
+button {
+    background-color: rgba(223, 144, 0, 0.6);
+    border: none;
+    color: white;
+    padding: 1% 6%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 0.5% 0.5%;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #047daf;}
+
+textarea {
+    display: block;
+    width: 300px;
+    height: 150px;
+    font-size: 1.2em;
+}

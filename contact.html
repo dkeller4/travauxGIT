@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Données</title>
+    <link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+    <header id="donnees">
+        <div id="wrapper">
+            <ul class="menu"><!-- Laisser ces commentaires pour supprimer les caractères fins de ligne
+            --><li><a id="homelink" href="index.html"><p>Accueil</p></a></li><!--
+            --><li><a id="productslink" href="produits.html"><p>Produits</p></a></li><!--
+            --><li class="active"><a id="datalink" href="contact.html"><p>Contact</p></a></li><!--
+            <!--<li><a href="index.html"></a></li>-->
+            </ul>
+        </div>
+    </header>
+
+        <h1>Contactez nous</h1>
+
+        <form action="contact.html" method="get">
+            <div id="saisie">
+                <label for="nom">Votre nom :</label>
+                <input type="text" name="nom" id="nom" placeholder="Ex: Jack Roule"/>
+                <label for="phone">Tél :</label>
+                <input type="tel" name="phone" id="phone" value="1-XXX-XXX-XXXX"/>
+                <label for="courriel">Email:</label>
+                <input type="email" name="email" id="courriel"/>
+            </div>
+            <div>
+                <label for="choix">Sujet </label>
+                <select name="choixcontact" id="choix">
+                    <option value="-1">Choisir...</option>
+                    <option value="epl">Emploi</option>
+                    <option value="ctc">Contact</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Contacter via :</label>
+                <input type="checkbox" name="tel" id="tel"/>
+                <label for="tel">Tél</label>
+                <input type="checkbox" name="em" id="em"/>
+                <label for="em">Email</label>
+            </div>
+            <div>
+                <label>Contacter :</label>
+                <input type="radio" name="contacter" value="mark" id="mark"/>
+                <label for="mark">Marketing</label>
+                <input type="radio" name="contacter" value="pro" id="pro"/>
+                <label for="pro">Professionel</label>
+            </div>
+            <div id="comment">
+                <label for="commentaire">Commentaire :</label>
+                <textarea id="commentaire"></textarea>
+            </div>
+            <div>
+                <button type="submit">Confirmer</button>
+            </div>
+        </form>
+
+    <script src="script/main.js"></script>
+</body>
+</html>
