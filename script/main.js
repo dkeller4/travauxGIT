@@ -2,9 +2,10 @@
  * Created by dkeller on 2016-11-14.
  */
 
+$('<div class="container" ></div>').appendTo('body');
 $.each(forfaits, function(){
         $('<div class="forfait" ></div>')
-            .appendTo('body')
+            .appendTo('div.container')
             .append('<ul></ul>')
             .children('ul')
             .append('<li></li>')

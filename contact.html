@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Données</title>
     <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/formulaire.css" />
 </head>
 <body>
     <header id="donnees">
@@ -16,51 +17,71 @@
             </ul>
         </div>
     </header>
+    <div id="wrapper2">
+        <h2>Les formulaires</h2>
+        <div id="contenu">
+            <form id="form_resa" name="form_resa">
+                <div>
+                    <label for="nom">Nom:</label>
+                    <input name="nom" id="nom" type="text"/>
+                </div>
+                <div>
+                    <label for="email">Courriel:</label>
+                    <input name="email" id="email" type="text"/>
+                </div>
+                <div>
+                    <label for="website">Site web:</label>
+                    <input name="website" id="website" type="text"/>
+                </div>
+                <div>
+                    <label for="date_commande">Date commande:</label>
+                    <input type="text" name="date_commande" id="date_commande"/>
+                </div>
+                <div>
+                    <label for="sexe_h">Homme:</label>
+                    <input type="radio" name="sexe" id="sexe_h" value="sexe_h"/>
+                    <br/>
+                    <label for="sexe_f">Femme:</label>
+                    <input type="radio" name="sexe" id="sexe_f" value="sexe_f"/>
+                </div>
+                <div>
+                    <label for="ville">Ville:</label>
+                    <select name="ville" id="ville">
+                        <option value="-1">Choisir...</option>
+                        <option value="mo">Montréal</option>
+                        <option value="qc">Québec</option>
+                        <option value="ga">Gâtineau</option>
+                        <option value="sh">Sherbrooke</option>
+                    </select>
 
-        <h1>Contactez nous</h1>
+                </div>
+                <div>
+                    <label for="sports">Sports:</label>
+                    <select name="sports" id="sports" multiple="multiple" size="5">
+                        <option value="foot">Foot</option>
+                        <option value="tennis">Tennis</option>
+                        <option value="danse">Danse</option>
+                        <option value="yoga">Yoga</option>
+                        <option value="canape">Canapé</option>
+                    </select>
 
-        <form action="contact.html" method="get">
-            <div id="saisie">
-                <label for="nom">Votre nom :</label>
-                <input type="text" name="nom" id="nom" placeholder="Ex: Jack Roule"/>
-                <label for="phone">Tél :</label>
-                <input type="tel" name="phone" id="phone" value="1-XXX-XXX-XXXX"/>
-                <label for="courriel">Email:</label>
-                <input type="email" name="email" id="courriel"/>
-            </div>
-            <div>
-                <label for="choix">Sujet </label>
-                <select name="choixcontact" id="choix">
-                    <option value="-1">Choisir...</option>
-                    <option value="epl">Emploi</option>
-                    <option value="ctc">Contact</option>
-                </select>
-            </div>
+                </div>
+                <div>
+                    <label for="commentaire">Commentaire:</label>
+                    <textarea rows="10" cols="50" name="commentaire" id="commentaire">Valeur par défaut dans le content de l'élément textarea</textarea>
+                </div>
+                <div>
+                    <label for="accepte">J'accepte les conditions:</label>
+                    <input type="checkbox" name="accepte" id="accepte" type="text" value="accepte"/>
+                </div>
+                <div>
+                    <input type="submit" value="Réserver" />
+                </div>
+            </form>
+        </div>
+    </div>
 
-            <div>
-                <label>Contacter via :</label>
-                <input type="checkbox" name="tel" id="tel"/>
-                <label for="tel">Tél</label>
-                <input type="checkbox" name="em" id="em"/>
-                <label for="em">Email</label>
-            </div>
-            <div>
-                <label>Contacter :</label>
-                <input type="radio" name="contacter" value="mark" id="mark"/>
-                <label for="mark">Marketing</label>
-                <input type="radio" name="contacter" value="pro" id="pro"/>
-                <label for="pro">Professionel</label>
-            </div>
-            <div id="comment">
-                <label for="commentaire">Commentaire :</label>
-                <textarea id="commentaire"></textarea>
-            </div>
-            <div>
-                <button type="submit">Confirmer</button>
-            </div>
-        </form>
-
-    <script src="script/forfaits.js"></script>
-    <script src="script/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="script/formulaire.js"></script>
 </body>
 </html>
